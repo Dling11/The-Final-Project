@@ -1,22 +1,23 @@
 import { motion } from 'framer-motion';
 import { SelectedPage } from '~/mylinks/types';
-import { myprogress } from "~/pages/e-progress/myprogress"
-import MyWebsite from './mywebsite';
+import { myprogress } from "~/pages/e-progress/MyProgress"
+import  MyWebsite  from '~/pages/e-progress/MyWebsite';
 import { ClassType } from "~/pages/types"
 import React from 'react'
 
 type Props = {
-   selectedPage: SelectedPage;
    setSelectedPage: (value: SelectedPage) => void;
 }
 
-const Progress = ({ selectedPage, setSelectedPage }: Props) => {
+const Progress = ({ setSelectedPage }: Props) => {
 
   return (
     <section
       id='myprogress'
     >
-            <motion.div>
+            <motion.div
+               onViewportEnter={() => setSelectedPage(SelectedPage.MyProgress)}
+            >
 
          <motion.div
             className="mx-auto w-5/6"
@@ -39,7 +40,17 @@ const Progress = ({ selectedPage, setSelectedPage }: Props) => {
             </div>
          </motion.div>
 
-         <div className="mt-10 h-[300px] w-full overflow-x-auto overflow-y-hidden scrollbar">
+         <motion.div 
+            className="mt-10 h-[300px] w-full overflow-x-auto overflow-y-hidden scrollbar"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            variants={{
+               hidden: { opacity: 0, x: -50 }, //===> refer to initial="hidden"
+               visible: { opacity: 1, x: 0 }, //===> refer to whileInView="visible"
+            }}
+         >
             <ul className="w-[2200px] whitespace-nowrap">
                {myprogress.map((item: ClassType, index) => (
                   <MyWebsite
@@ -50,7 +61,7 @@ const Progress = ({ selectedPage, setSelectedPage }: Props) => {
                   />
                ))}
             </ul>
-         </div>
+         </motion.div>
       </motion.div>
     </section>
   )

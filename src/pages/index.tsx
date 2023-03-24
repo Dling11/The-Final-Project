@@ -5,6 +5,8 @@ import Navbar from "~/pages/a-navbar";
 import Header from "~/pages/c-header";
 import About from "./d-aboutme/about";
 import Progress from "./e-progress/Progress";
+import Contact from "./f-contact/ContactMe";
+import Footer from "./g-footer/Footer";
 
 const Home: FC & { isPublic?: boolean } = () => {
 
@@ -24,17 +26,18 @@ const Home: FC & { isPublic?: boolean } = () => {
         setSelectedPage={setSelectedPage}
       />
       <Header 
-        selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
       <About 
-        selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
       <Progress 
-        selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
+      <Contact 
+        setSelectedPage={setSelectedPage}
+      />
+      <Footer />
     </>
   );
 };

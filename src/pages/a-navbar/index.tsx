@@ -24,7 +24,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
                <div className="flex items-center justify-between w-full">
 
             {/*==========> first div links <========== */}
-                  <div className="flex items-center justify-between gap-8 text-sm">
+                  <div className="flex items-center justify-between gap-8 text-sm text-white">
                   <Link 
                      page="Home" 
                      selectedPage={selectedPage}

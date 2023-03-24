@@ -9,8 +9,6 @@ html,
 body,
 #root,
 .app {
-    /* height: 100%;
-    width: 100%; */
     font-family: "DM sans", sans-serif;
     color: rgb(17, 18, 22);
     scroll-behavior: smooth;
@@ -39,7 +37,11 @@ section {
 .card-border:hover {
     border-color: white;
 }
-/* scrollbar img-websites */
+.sunset {
+  background: linear-gradient(343deg, rgba(202, 149, 149, 0.54), rgba(219, 94, 32, 0.69)), url("../img/sunset.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 @layer utilities {
     .scrollbar::-webkit-scrollbar {
