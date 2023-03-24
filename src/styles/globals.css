@@ -1,3 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* additional styles :3*/
+html,
+body,
+#root,
+.app {
+    /* height: 100%;
+    width: 100%; */
+    font-family: "DM sans", sans-serif;
+    color: rgb(17, 18, 22);
+    scroll-behavior: smooth;
+}
+.radius-rem {
+   border-radius: 9rem 9rem 2rem 2rem;
+   height: 19.5rem;
+}
+.border-radius-icon {
+    border-radius: 0.5rem;
+}
+/* section & container */
+section {
+    padding: 10rem 0;
+}
+.container {
+    width: 76%;
+    margin-inline: auto;
+    max-width: 1920px;
+}
+/* about */
+.grid-about {
+    grid-template-columns: 35% 53%;
+    gap: 12%;
+}
+.card-border:hover {
+    border-color: white;
+}
+/* scrollbar img-websites */
+
+@layer utilities {
+    .scrollbar::-webkit-scrollbar {
+      width: 15px;
+      height: 16px;
+    }
+  
+    .scrollbar::-webkit-scrollbar-track {
+      border-radius: 100vh;
+      background: #f7f4ed;
+    }
+  
+    .scrollbar::-webkit-scrollbar-thumb {
+      background: #f7b885;
+      border-radius: 100vh;
+      border: 3px solid #f6f7ed;
+    }
+  
+    .scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #e39d40;
+    }
+  }
