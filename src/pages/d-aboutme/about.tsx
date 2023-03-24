@@ -14,9 +14,9 @@ type Props = {
 const About = ({ setSelectedPage }: Props) => {
 
    const iconList = [
-      {id: 1, icon: <FaAward />, title: "Experience", desc: '3+ Years Hacking'},
-      {id: 2, icon: <TbBooks />, title: "Projects", desc: '180+ Completed'},
-      {id: 3, icon: <BiHappyHeartEyes />, title: "Clients", desc: '70+ hacked clients'},
+      {id: 1, icon: <FaAward />, title: "Experience", desc: '1 Year'},
+      {id: 2, icon: <TbBooks />, title: "Projects", desc: '12 Completed'},
+      {id: 3, icon: <BiHappyHeartEyes />, title: "Client", desc: '1 client'},
   ]
   const classCombo = `flex items-center gap-4 border-hover text-white py-[0.6rem] px-[2.5rem] cursor-pointer rounded-xl hover:-translate-y-2 transition-all duration-[400ms]`;
 
